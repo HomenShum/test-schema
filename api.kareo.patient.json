@@ -1,0 +1,989 @@
+{
+    "apiVersion": "1.0",
+    "swaggerVersion": "1.2",
+    "basePath": "https://api.kareo.com/clinical/v1/api",
+    "resourcePath": "/patient",
+    "produces": [
+        "application/json"
+    ],
+    "consumes": [
+        "application/json"
+    ],
+    "apis": [
+        {
+            "path": "/patient/observation/socialHistory/smokingStatus",
+            "operations": [
+                {
+                    "method": "GET",
+                    "summary": "Get patient's smoking status",
+                    "notes": "Get patient's smoking status",
+                    "type": "SmokingStatusResponse",
+                    "nickname": "getPatientSmokingStatus",
+                    "parameters": []
+                }
+            ]
+        },
+        {
+            "path": "/patient/medicationStatement",
+            "operations": [
+                {
+                    "method": "GET",
+                    "summary": "Gets a list of patient's medication list",
+                    "notes": "Gets a list of patient's medications list",
+                    "type": "MedicationStatementResponse",
+                    "nickname": "getPatientMedicationStatement",
+                    "parameters": [
+                        {
+                            "name": "startDate",
+                            "required": false,
+                            "allowMultiple": false,
+                            "type": "string",
+                            "paramType": "query"
+                        },
+                        {
+                            "name": "endDate",
+                            "required": false,
+                            "allowMultiple": false,
+                            "type": "string",
+                            "paramType": "query"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "path": "/patient/diagnosticReport",
+            "operations": [
+                {
+                    "method": "GET",
+                    "summary": "Gets a list of patient's laboratory test result",
+                    "notes": "Gets a list of patient's laboratory test result",
+                    "type": "DiagnosticReportResponse",
+                    "nickname": "getPatientDiagnosticReport",
+                    "parameters": [
+                        {
+                            "name": "startDate",
+                            "required": false,
+                            "allowMultiple": false,
+                            "type": "string",
+                            "paramType": "query"
+                        },
+                        {
+                            "name": "endDate",
+                            "required": false,
+                            "allowMultiple": false,
+                            "type": "string",
+                            "paramType": "query"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "path": "/patient/immunization",
+            "operations": [
+                {
+                    "method": "GET",
+                    "summary": "Gets a list of patient's immunization data",
+                    "notes": "Gets a list of patient's immunization data",
+                    "type": "ImmunizationResponse",
+                    "nickname": "getPatientImmunization",
+                    "parameters": [
+                        {
+                            "name": "startDate",
+                            "required": false,
+                            "allowMultiple": false,
+                            "type": "string",
+                            "paramType": "query"
+                        },
+                        {
+                            "name": "endDate",
+                            "required": false,
+                            "allowMultiple": false,
+                            "type": "string",
+                            "paramType": "query"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "path": "/patient/procedure",
+            "operations": [
+                {
+                    "method": "GET",
+                    "summary": "Gets a list of patient's procedures",
+                    "notes": "Gets a list of patient's procedures",
+                    "type": "ProcedureResponse",
+                    "nickname": "getPatientProcedure",
+                    "parameters": [
+                        {
+                            "name": "startDate",
+                            "required": false,
+                            "allowMultiple": false,
+                            "type": "string",
+                            "paramType": "query"
+                        },
+                        {
+                            "name": "endDate",
+                            "required": false,
+                            "allowMultiple": false,
+                            "type": "string",
+                            "paramType": "query"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "path": "/patient/allergyIntolerance/medicalAllergy",
+            "operations": [
+                {
+                    "method": "GET",
+                    "summary": "Gets a list of patient's allergies",
+                    "notes": "Gets a list of patient's allergies",
+                    "type": "MedicalAllergyResponse",
+                    "nickname": "getPatientMedicalAllergy",
+                    "parameters": [
+                        {
+                            "name": "startDate",
+                            "required": false,
+                            "allowMultiple": false,
+                            "type": "string",
+                            "paramType": "query"
+                        },
+                        {
+                            "name": "endDate",
+                            "required": false,
+                            "allowMultiple": false,
+                            "type": "string",
+                            "paramType": "query"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "path": "/patient/device",
+            "operations": [
+                {
+                    "method": "GET",
+                    "summary": "Gets a list of unique device identifier(s) for a patient's implantable devices(s)",
+                    "notes": "Gets a list of unique device identifier(s) for a patient's implantable devices(s)",
+                    "type": "DeviceResponse",
+                    "nickname": "getPatientDevice",
+                    "parameters": [
+                        {
+                            "name": "startDate",
+                            "required": false,
+                            "allowMultiple": false,
+                            "type": "string",
+                            "paramType": "query"
+                        },
+                        {
+                            "name": "endDate",
+                            "required": false,
+                            "allowMultiple": false,
+                            "type": "string",
+                            "paramType": "query"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "path": "/patient/carePlan",
+            "operations": [
+                {
+                    "method": "GET",
+                    "summary": "Gets a list of care plans associated with the patient",
+                    "notes": "Gets a list of care plans associated with the patient",
+                    "type": "CarePlanResponse",
+                    "nickname": "getPatientCarePlan",
+                    "parameters": [
+                        {
+                            "name": "startDate",
+                            "required": false,
+                            "allowMultiple": false,
+                            "type": "string",
+                            "paramType": "query"
+                        },
+                        {
+                            "name": "endDate",
+                            "required": false,
+                            "allowMultiple": false,
+                            "type": "string",
+                            "paramType": "query"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "path": "/patient/encounter",
+            "operations": [
+                {
+                    "method": "GET",
+                    "summary": "Gets a list of relevant information regarding the visit, care team, health concerns associated with the patient",
+                    "notes": "Gets a list of relevant information regarding the visit, care team, health concerns associated with the patient",
+                    "type": "EncounterResponse",
+                    "nickname": "getPatientEncounter",
+                    "parameters": [
+                        {
+                            "name": "startDate",
+                            "required": false,
+                            "allowMultiple": false,
+                            "type": "string",
+                            "paramType": "query"
+                        },
+                        {
+                            "name": "endDate",
+                            "required": false,
+                            "allowMultiple": false,
+                            "type": "string",
+                            "paramType": "query"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "path": "/patient/goal",
+            "operations": [
+                {
+                    "method": "GET",
+                    "summary": "Gets a list of goals associated with the patient",
+                    "notes": "Gets a list of goals associated with the patient",
+                    "type": "GoalResponse",
+                    "nickname": "getPatientGoal",
+                    "parameters": [
+                        {
+                            "name": "startDate",
+                            "required": false,
+                            "allowMultiple": false,
+                            "type": "string",
+                            "paramType": "query"
+                        },
+                        {
+                            "name": "endDate",
+                            "required": false,
+                            "allowMultiple": false,
+                            "type": "string",
+                            "paramType": "query"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "path": "/patient/condition/problemList",
+            "operations": [
+                {
+                    "method": "GET",
+                    "summary": "Gets a list of patient's problems",
+                    "notes": "Gets a list of patient's problems",
+                    "type": "ProblemListResponse",
+                    "nickname": "getPatientProblemList",
+                    "parameters": [
+                        {
+                            "name": "startDate",
+                            "required": false,
+                            "allowMultiple": false,
+                            "type": "string",
+                            "paramType": "query"
+                        },
+                        {
+                            "name": "endDate",
+                            "required": false,
+                            "allowMultiple": false,
+                            "type": "string",
+                            "paramType": "query"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "path": "/patient/binary/summary",
+            "operations": [
+                {
+                    "method": "GET",
+                    "summary": "Gets a CCDA document for the patient",
+                    "notes": "Gets a CCDA document for the patient",
+                    "type": "SummaryResponse",
+                    "nickname": "getPatientSummary",
+                    "parameters": [
+                        {
+                            "name": "startDate",
+                            "required": false,
+                            "allowMultiple": false,
+                            "type": "string",
+                            "paramType": "query"
+                        },
+                        {
+                            "name": "endDate",
+                            "required": false,
+                            "allowMultiple": false,
+                            "type": "string",
+                            "paramType": "query"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "path": "/patient/",
+            "operations": [
+                {
+                    "method": "GET",
+                    "summary": "Get patient's demographic information",
+                    "notes": "Get patient's demographic information",
+                    "type": "PatientResponse",
+                    "nickname": "getPatient",
+                    "parameters": []
+                }
+            ]
+        },
+        {
+            "path": "/patient/observation/vitalSigns",
+            "operations": [
+                {
+                    "method": "GET",
+                    "summary": "Gets a list of patient's vital signs",
+                    "notes": "Gets a list of patient's vital signs",
+                    "type": "VitalSignResponse",
+                    "nickname": "getPatientVitalSigns",
+                    "parameters": [
+                        {
+                            "name": "startDate",
+                            "required": false,
+                            "allowMultiple": false,
+                            "type": "string",
+                            "paramType": "query"
+                        },
+                        {
+                            "name": "endDate",
+                            "required": false,
+                            "allowMultiple": false,
+                            "type": "string",
+                            "paramType": "query"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "models": {
+        "Detail": {
+            "id": "Detail",
+            "properties": {
+                "description": {
+                    "type": "string"
+                }
+            }
+        },
+        "SummaryResponse": {
+            "id": "SummaryResponse",
+            "properties": {
+                "contentType": {
+                    "type": "string"
+                },
+                "content": {
+                    "type": "string"
+                },
+                "patient": {
+                    "$ref": "PatientMeta"
+                },
+                "meta": {
+                    "$ref": "ResponseMeta"
+                }
+            }
+        },
+        "Location": {
+            "id": "Location",
+            "properties": {
+                "identifier": {
+                    "type": "string"
+                },
+                "address": {
+                    "$ref": "Address"
+                },
+                "name": {
+                    "type": "string"
+                }
+            }
+        },
+        "Dosage": {
+            "id": "Dosage",
+            "properties": {
+                "sig": {
+                    "type": "string"
+                }
+            }
+        },
+        "CarePlan": {
+            "id": "CarePlan",
+            "properties": {
+                "addresses": {
+                    "$ref": "Address"
+                },
+                "activity": {
+                    "$ref": "Activity"
+                },
+                "context": {
+                    "$ref": "Context"
+                }
+            }
+        },
+        "DiagnosticReport": {
+            "id": "DiagnosticReport",
+            "properties": {
+                "issued": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "observation": {
+                    "$ref": "List[Observation]"
+                },
+                "status": {
+                    "type": "string"
+                }
+            }
+        },
+        "Encounter": {
+            "id": "Encounter",
+            "properties": {
+                "participant": {
+                    "$ref": "List[Participant]"
+                },
+                "period": {
+                    "$ref": "Period"
+                },
+                "diagnosis": {
+                    "$ref": "Diagnosis"
+                },
+                "location": {
+                    "$ref": "Location"
+                }
+            }
+        },
+        "Address": {
+            "id": "Address",
+            "properties": {
+                "street": {
+                    "type": "string"
+                },
+                "city": {
+                    "type": "string"
+                },
+                "postalCode": {
+                    "type": "string"
+                },
+                "state": {
+                    "type": "string"
+                }
+            }
+        },
+        "Condition": {
+            "id": "Condition",
+            "properties": {
+                "problemList": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "Problem"
+                    }
+                }
+            }
+        },
+        "ProblemListResponse": {
+            "id": "ProblemListResponse",
+            "properties": {
+                "condition": {
+                    "$ref": "Condition"
+                },
+                "patient": {
+                    "$ref": "PatientMeta"
+                },
+                "meta": {
+                    "$ref": "ResponseMeta"
+                }
+            }
+        },
+        "Device": {
+            "id": "Device",
+            "properties": {
+                "udi": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "UDI"
+                    }
+                }
+            }
+        },
+        "Procedure": {
+            "id": "Procedure",
+            "properties": {
+                "code": {
+                    "type": "string"
+                },
+                "date": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "status": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                }
+            }
+        },
+        "Goal": {
+            "id": "Goal",
+            "properties": {
+                "statusDate": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "description": {
+                    "type": "string"
+                }
+            }
+        },
+        "DeviceResponse": {
+            "id": "DeviceResponse",
+            "properties": {
+                "device": {
+                    "$ref": "Device"
+                },
+                "patient": {
+                    "$ref": "PatientMeta"
+                },
+                "meta": {
+                    "$ref": "ResponseMeta"
+                }
+            }
+        },
+        "Medication": {
+            "id": "Medication",
+            "properties": {
+                "code": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                }
+            }
+        },
+        "MedicationStatement": {
+            "id": "MedicationStatement",
+            "properties": {
+                "endDate": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "startDate": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "medication": {
+                    "$ref": "Medication"
+                },
+                "dosage": {
+                    "$ref": "Dosage"
+                }
+            }
+        },
+        "VitalSign": {
+            "id": "VitalSign",
+            "properties": {
+                "unit": {
+                    "type": "string"
+                },
+                "code": {
+                    "type": "string"
+                },
+                "date": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "value": {
+                    "type": "number",
+                    "format": "double"
+                }
+            }
+        },
+        "Problem": {
+            "id": "Problem",
+            "properties": {
+                "endDate": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "startDate": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "code": {
+                    "type": "string"
+                },
+                "status": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                }
+            }
+        },
+        "Observation": {
+            "id": "Observation",
+            "properties": {
+                "vitalSign": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "VitalSign"
+                    }
+                }
+            }
+        },
+        "VitalSignResponse": {
+            "id": "VitalSignResponse",
+            "properties": {
+                "observation": {
+                    "$ref": "Observation"
+                },
+                "patient": {
+                    "$ref": "PatientMeta"
+                },
+                "meta": {
+                    "$ref": "ResponseMeta"
+                }
+            }
+        },
+        "Activity": {
+            "id": "Activity",
+            "properties": {
+                "detail": {
+                    "$ref": "Detail"
+                }
+            }
+        },
+        "MedicationStatementResponse": {
+            "id": "MedicationStatementResponse",
+            "properties": {
+                "medicationStatement": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "MedicationStatement"
+                    }
+                },
+                "patient": {
+                    "$ref": "PatientMeta"
+                },
+                "meta": {
+                    "$ref": "ResponseMeta"
+                }
+            }
+        },
+        "Context": {
+            "id": "Context",
+            "properties": {
+                "period": {
+                    "$ref": "Period"
+                }
+            }
+        },
+        "MedicalAllergy": {
+            "id": "MedicalAllergy",
+            "properties": {
+                "startDate": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "allergen": {
+                    "type": "string"
+                },
+                "reaction": {
+                    "$ref": "List[Reaction]"
+                },
+                "severity": {
+                    "type": "string"
+                },
+                "code": {
+                    "type": "string"
+                },
+                "status": {
+                    "type": "string"
+                }
+            }
+        },
+        "Period": {
+            "id": "Period",
+            "properties": {
+                "endDate": {
+                    "type": "string",
+                    "format": "date-time"
+                }
+            }
+        },
+        "Immunization": {
+            "id": "Immunization",
+            "properties": {
+                "lotNumber": {
+                    "type": "string"
+                },
+                "manufacturer": {
+                    "type": "string"
+                },
+                "notes": {
+                    "type": "string"
+                },
+                "code": {
+                    "type": "string"
+                },
+                "date": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "status": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                }
+            }
+        },
+        "PatientResponse": {
+            "id": "PatientResponse",
+            "properties": {
+                "patient": {
+                    "$ref": "Patient"
+                },
+                "meta": {
+                    "$ref": "ResponseMeta"
+                }
+            }
+        },
+        "AllergyIntolerance": {
+            "id": "AllergyIntolerance",
+            "properties": {
+                "medicalAllergy": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "MedicalAllergy"
+                    }
+                }
+            }
+        },
+        "UDI": {
+            "id": "UDI",
+            "properties": {
+                "comments": {
+                    "type": "string"
+                },
+                "deviceIdentifier": {
+                    "type": "string"
+                },
+                "carrierHRF": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                }
+            }
+        },
+        "Patient": {
+            "id": "Patient",
+            "properties": {
+                "patientId": {
+                    "type": "string"
+                },
+                "dob": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "gender": {
+                    "type": "string"
+                },
+                "firstName": {
+                    "type": "string"
+                },
+                "lastName": {
+                    "type": "string"
+                },
+                "ethnicity": {
+                    "$ref": "List[PatientAttribute]"
+                },
+                "race": {
+                    "$ref": "List[PatientAttribute]"
+                },
+                "raceGroup": {
+                    "$ref": "List[PatientAttribute]"
+                },
+                "communication": {
+                    "$ref": "List[Communication]"
+                },
+                "ethnicityGroup": {
+                    "$ref": "List[PatientAttribute]"
+                }
+            }
+        },
+        "Diagnosis": {
+            "id": "Diagnosis",
+            "properties": {
+                "condition": {
+                    "$ref": "List[Condition]"
+                }
+            }
+        },
+        "PatientMeta": {
+            "id": "PatientMeta",
+            "properties": {
+                "patientId": {
+                    "type": "string"
+                }
+            }
+        },
+        "ResponseMeta": {
+            "id": "ResponseMeta",
+            "properties": {
+                "date": {
+                    "type": "string"
+                }
+            }
+        },
+        "EncounterResponse": {
+            "id": "EncounterResponse",
+            "properties": {
+                "encounter": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "Encounter"
+                    }
+                },
+                "patient": {
+                    "$ref": "PatientMeta"
+                },
+                "meta": {
+                    "$ref": "ResponseMeta"
+                }
+            }
+        },
+        "SmokingStatusResponse": {
+            "id": "SmokingStatusResponse",
+            "properties": {
+                "observation": {
+                    "$ref": "Observation"
+                },
+                "patient": {
+                    "$ref": "PatientMeta"
+                },
+                "meta": {
+                    "$ref": "ResponseMeta"
+                }
+            }
+        },
+        "MedicalAllergyResponse": {
+            "id": "MedicalAllergyResponse",
+            "properties": {
+                "allergyIntolerance": {
+                    "$ref": "AllergyIntolerance"
+                },
+                "patient": {
+                    "$ref": "PatientMeta"
+                },
+                "meta": {
+                    "$ref": "ResponseMeta"
+                }
+            }
+        },
+        "ImmunizationResponse": {
+            "id": "ImmunizationResponse",
+            "properties": {
+                "immunization": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "Immunization"
+                    }
+                },
+                "patient": {
+                    "$ref": "PatientMeta"
+                },
+                "meta": {
+                    "$ref": "ResponseMeta"
+                }
+            }
+        },
+        "DiagnosticReportResponse": {
+            "id": "DiagnosticReportResponse",
+            "properties": {
+                "diagnosticReport": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "DiagnosticReport"
+                    }
+                },
+                "patient": {
+                    "$ref": "PatientMeta"
+                },
+                "meta": {
+                    "$ref": "ResponseMeta"
+                }
+            }
+        },
+        "ProcedureResponse": {
+            "id": "ProcedureResponse",
+            "properties": {
+                "procedure": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "Procedure"
+                    }
+                },
+                "patient": {
+                    "$ref": "PatientMeta"
+                },
+                "meta": {
+                    "$ref": "ResponseMeta"
+                }
+            }
+        },
+        "GoalResponse": {
+            "id": "GoalResponse",
+            "properties": {
+                "goal": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "Goal"
+                    }
+                },
+                "patient": {
+                    "$ref": "PatientMeta"
+                },
+                "meta": {
+                    "$ref": "ResponseMeta"
+                }
+            }
+        },
+        "CarePlanResponse": {
+            "id": "CarePlanResponse",
+            "properties": {
+                "carePlan": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "CarePlan"
+                    }
+                },
+                "patient": {
+                    "$ref": "PatientMeta"
+                },
+                "meta": {
+                    "$ref": "ResponseMeta"
+                }
+            }
+        }
+    }
+}
