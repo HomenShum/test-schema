@@ -1,5 +1,6 @@
 # Get Request Endpoint (Pull from frontend button using User Auth)
 
+# Add this into swaggerUI for docs
 
 Endpoint: https://api.kareo.com/clinical/v1/api/api-docs/patient
           # Auth Token API
